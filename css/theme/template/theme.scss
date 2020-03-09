@@ -12,7 +12,7 @@ body {
 .reveal {
 	font-family: $mainFont;
 	font-size: $mainFontSize;
-	font-weight: normal;
+	font-weight: 200;
 	color: $mainColor;
 }
 
@@ -276,6 +276,7 @@ body {
 	.reveal section img.plain {
 		border: 0;
 		box-shadow: none;
+		background: none;
 	}
 
 	.reveal a img {

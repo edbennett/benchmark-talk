@@ -24,7 +24,7 @@ body {
 .reveal {
   font-family: "Open Sans", sans-serif;
   font-size: 40px;
-  font-weight: normal;
+  font-weight: 200;
   color: #333; }
 
 ::selection {
@@ -242,7 +242,8 @@ body {
 
 .reveal section img.plain {
   border: 0;
-  box-shadow: none; }
+  box-shadow: none;
+  background: none; }
 
 .reveal a img {
   -webkit-transition: all .15s linear;
