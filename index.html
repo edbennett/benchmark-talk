@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>BSMBench and SOMBRERO: Speed testing supercomputers with physics</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/sa2c.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -24,9 +24,50 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+		  <div class="slides">
+		    <section>
+		      <h2 style="padding-top: 200px;">
+			BSMBench and SOMBRERO: Speed testing supercomputers with physics
+		      </h2>
+		      <h3>
+			Ed Bennett
+		      </h3>
+		      <p>
+			from research with Luigi Del Debbio, Kirk Jordan, Biagio Lucini, <br />Agostino Patella, Antonio Rago, and Jarno Rantaharju
+		      </p>
+		      <div style="padding-top: 200px;">
+			<a href="https://www.swansea.ac.uk">
+			  <img class="plain title-image" src='/images/su-vstack-white.svg'>
+			</a>
+			<a href="https://sa2c.swansea.ac.uk">
+			  <img class="plain title-image" src='/images/sa2c-white.svg'>
+			</a>
+			<a href="https://www.supercomputing.wales">
+			  <img class="plain title-image" src='/images/scw-gradient-white-stack.svg'>
+			</a>
+			<a href="https://twitter.com/wefowales">
+			  <img class="plain title-image" src='/images/ERDF.svg'>
+			</a>
+		      </div>
+		    </section>
+
+		    <section>
+		      <h2>Outline</h2>
+		      <ul>
+			<li>Lattice Gauge Theory</li>
+			<li>HiRep</li>
+			<li>Benchmarking</li>
+			<li>BSMBench</li>
+			<li>SOMBRERO</li>
+			<li>Selected results</li>
+		      </ul>
+		    </section>
+		    <section data-markdown="slides/lattice.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
+		    <section data-markdown="slides/hirep.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
+		    <section data-markdown="slides/benchmarking.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
+		    <section data-markdown="slides/bsmbench.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
+		    <section data-markdown="slides/sombrero.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
+		    <section data-markdown="slides/results.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
 			</div>
 		</div>
 
@@ -38,13 +79,25 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
+			    width: 1920,
+			    height: 1080,
+			    math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-AMS_HTML-full', // See http://docs.mathjax.org/en/latest/config-files.html
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+			    },
+
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
+				    { src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
+
 		</script>
 	</body>
 </html>
