@@ -58,10 +58,10 @@ body {
 
 .reveal .slides section .fragment.fade-out {
   opacity: 1;
-  display: inline; }
+  visibility: inherit; }
   .reveal .slides section .fragment.fade-out.visible {
     opacity: 0;
-    display: none; }
+    visibility: hidden; }
 
 .reveal .slides section .fragment.semi-fade-out {
   opacity: 1;
@@ -107,11 +107,11 @@ body {
 .reveal .slides section .fragment.fade-in-then-out,
 .reveal .slides section .fragment.current-visible {
   opacity: 0;
-  display: none; }
+  visibility: hidden; }
   .reveal .slides section .fragment.fade-in-then-out.current-fragment,
   .reveal .slides section .fragment.current-visible.current-fragment {
     opacity: 1;
-    display: inline; }
+    visibility: inherit; }
 
 .reveal .slides section .fragment.fade-in-then-semi-out {
   opacity: 0;
