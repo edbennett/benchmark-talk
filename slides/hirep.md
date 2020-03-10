@@ -22,7 +22,6 @@ representation.
 * Instead, generate code for the specific $N$ and $M$ under study
 * Perform group theoretical calculations in C++
 * Do dirty work of string manipulation and gluing files together in Perl
-* Use macros to ensure inlining even in deep nests
 
 -
 
@@ -42,3 +41,15 @@ OpenMP:
 
 * Loops over local volume are abstracted as macros
 * Loop macros include relevant OpenMP pragmas
+
+-
+
+## Performance considerations
+
+Design decisions based on mid-2000s compilers
+
+* Heavy use of preprocessor macros to avoid function calls in tight loops
+  * Deep nests of macros defining and calling macros
+* Loops in macros are partially or completely hand-unrolled
+* Custom `complex.h` due to poor C99 complex support
+  * Current (2020) HiRep branch has switched to C99 `complex.h`
